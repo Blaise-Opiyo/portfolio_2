@@ -1,5 +1,5 @@
 html, body{
-    
+    scroll-behavior: smooth;
 }
 *{
     margin: 0;
@@ -28,9 +28,9 @@ html, body{
 
 } */
 
-.blog-home .main-section .intro-section{
+/* .blog-home .main-section .intro-section{
     
-}
+} */
 .blog-home .main-section .top-nav{
     width: 100%;
     height: fit-content;
@@ -53,15 +53,23 @@ html, body{
     justify-content: center;
     align-content: center;
 }
+.blog-home .main-section .mobile-logo .img-logo-cont{
+    width: 140px;
+    height: 70px;
+}
+.blog-home .main-section .mobile-logo .img-logo-cont img{
+    width: 100%;
+    height: 100%;
+}
 .blog-home .main-section .top-nav::after {
     content: "";
     clear: both;
     display: table;
 }
-.blog-home .main-section.top-nav ul{
-    list-style-type: none;
-    display: block;
-
+.blog-home .main-section .top-nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     font-family: karla, sans-serif;
 }
 .blog-home .main-section .top-nav ul li{
@@ -70,8 +78,17 @@ html, body{
     list-style-type: none;
 }
 .blog-home .main-section .top-nav ul li:first-child{
-    float: left;
-    
+    width: 180px;
+    height: 90px;
+    /* margin: 20px 0; */
+    margin-right: auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+.blog-home .main-section .top-nav ul li:first-child img{
+    width: 100%;
+    height: 100%;
 }
 .blog-home .main-section .top-nav ul li a{
     text-decoration: none;
@@ -80,6 +97,20 @@ html, body{
     display: block;
     font-family: 'Jost', sans-serif;
     font-size: 24px;
+    /* border: 1px solid plum;  */
+    
+}
+.blog-home .main-section .top-nav ul li a::after{
+    content: "";
+    background-color: rgba(255, 87, 2, 1);
+    width: 0;
+    height: 2px;
+    display: block;
+    transition: all .3s linear;
+    margin: 0 auto;
+}
+.blog-home .main-section .top-nav ul li:hover a::after{
+    width: 100%;
 }
 .blog-home .main-section .mid-intro-wrapper{
     display: inline-block;
@@ -99,14 +130,15 @@ html, body{
     align-items: center;
     color: rgba(255,255,255,.9);
     font-family: 'Jost', sans-serif;
-    font-size: 20px;
+    font-size: 28px;
     margin:1% auto ;
+    padding: 0 10%;
     width: 100%;
     height: inherit;
 }
 
 .blog-home .main-section .mid-intro div:first-child p{
-    margin: 5%;
+    margin: 5% ;
 }
 .blog-home .main-section .mid-intro div:nth-child(2) div{
     width: 460px;
@@ -159,6 +191,8 @@ html, body{
     background-size: cover;
     position: relative;
     border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: .5px;
 }
 .blog-home .main-section .projects-section .project-container img{
     width: 100%;
@@ -198,6 +232,10 @@ html, body{
     color: rgba(255,255,255,.96);
     border-radius: 20px;
 }
+.blog-home .main-section .projects-section .project-container .project-details div p:last-child a{
+    text-decoration: none;
+    color: rgba(255,255,255,.96);
+}
 .about-section-title{
     
 }
@@ -215,7 +253,7 @@ html, body{
     grid-template-columns: 3fr 4fr;
     place-items: center;
     margin: 0;
-    height: 84vh;
+    height: 90vh;
 }
 .blog-home .main-section .about-section .about-sec-grid .about-text{
     width: 80%;
@@ -225,8 +263,9 @@ html, body{
     display: grid;
     align-items: center;
     color: rgba(255,255,255,.9);
-    font-family: 'Jost', sans-serif;
-    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 21px;
+    letter-spacing: .5px;
 }
 .blog-home .main-section .about-section .about-sec-grid .about-text .technologies{
     display: grid;
@@ -287,6 +326,110 @@ html, body{
     grid-column: 5/span 6;
     grid-row: 1/span 9;
 }
+.blog-home .main-section .contact-section{
+    width: 90%;
+    height: fit-content;
+    height: -moz-fit-content;
+    margin: 2% auto 0 auto;
+    color: rgba(255,255,255,.9);
+}
+.blog-home .main-section .contact-section .contact-sec-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    margin: 0;
+    height: 90vh;
+}
+.blog-home .main-section .contact-section .contact-sec-grid > div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.blog-home .main-section .contact-section .contact-sec-grid .contact-details .details-wrapper{
+    margin: auto;
+    color: rgba(255,255,255,.9);
+    font-family: 'Jost', sans-serif;
+    width: 60%;
+    height: 60%;
+    font-size: 20px;
+}
+.blog-home .main-section .contact-section .contact-sec-grid .contact-details .details-wrapper h2{
+    margin: 2% 0;
+    text-align: left;
+}
+.blog-home .main-section .contact-section .contact-sec-grid .contact-details .details-wrapper h3{
+    margin: 1% 0;
+    text-align: left;
+}
+.blog-home .main-section .contact-section .contact-sec-grid .contact-details .details-wrapper p{
+    color: rgba(249, 104, 38, .7);
+}
+.blog-home .main-section .contact-section .contact-sec-grid .contact-details .details-wrapper .email-me-now{
+    width: fit-content;
+    width: -moz-fit-content;
+    height: fit-content;
+    height: -moz-fit-content;
+    padding: 10px 20px;
+    margin: 10% 0;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgba(249, 104, 38, .8);
+    transition: all .15s linear;
+}
+.blog-home .main-section .contact-section .contact-sec-grid .contact-details .details-wrapper .email-me-now:hover{
+    background-color: rgba(249, 104, 38, .95) ;
+}
+.blog-home .main-section .contact-section .contact-sec-grid .contact-details .details-wrapper .email-me-now a{
+    text-decoration: none;
+    color:  #e7ebf8;
+}
+.blog-home .main-section .contact-section .contact-sec-grid .contact-form form{
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: fit-content;
+    height: -moz-fit-content;
+}
+.blog-home .main-section .contact-section .contact-sec-grid .contact-form form input,textarea{
+    display: block;
+    width: 90%;
+    margin: 3%;
+    background-color: transparent;
+    outline-width: 0;
+    border: 1.2px solid rgba(255,255,255,.6);
+    border-radius: 5px;
+    color: rgba(255,255,255,.9);
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    padding: 0 5px;
+    transition: all .2s linear;
+}
+.blog-home .main-section .contact-section .contact-sec-grid .contact-form form input:focus,textarea:focus{
+    border-color: rgba(249, 104, 38, .9);
+}
+.blog-home .main-section .contact-section .contact-sec-grid .contact-form form input{
+    height: 48px;
+}
+.blog-home .main-section .contact-section .contact-sec-grid .contact-form form input[type=submit]{
+    background-color: rgba(249, 104, 38, .8);
+    color: rgba(255,255,255,1);
+    border-color: rgba(249, 104, 38, .8);
+    transition: all .2s linear;
+    cursor: pointer;
+}
+.blog-home .main-section .contact-section .contact-sec-grid .contact-form form input[type=submit]:hover{
+    background-color: rgba(249, 104, 38, .95);
+}
+footer{
+    padding: 2%;
+    text-align: center;
+    color: rgba(255,255,255,.6);
+    background-color: rgba(29, 37, 61, 1);
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: .8px;
+}
 
 /* >>>>>>>>>> MEDIA QUERIES <<<<<<<<<<< */
 @media screen and (max-width: 1100px){
@@ -299,8 +442,14 @@ html, body{
     .blog-home .main-section .top-nav{
         padding: 0;
     }
+    .blog-home .main-section .mid-intro{
+        padding: 0 5%;
+    }
 }
 @media screen and (max-width: 964px){
+    .blog-home .main-section .mid-intro{
+        padding: 0 3%;
+    }
     .blog-home .main-section .projects-section{
         width: 92%;
     }
@@ -344,6 +493,9 @@ html, body{
     }
 }
 @media screen and (max-width: 826px){
+    .blog-home .main-section .mid-intro{
+        padding: 0 1%;
+    }
     .blog-home .main-section .about-section .about-sec-grid{
         display: block;
         height: fit-content;
@@ -369,7 +521,8 @@ html, body{
         font-size: 20px;
     }
     .blog-home .main-section .mid-intro{
-        font-size: 17px;     
+        font-size: 20px;     
+        padding: 0;
     }
 
 }
@@ -395,10 +548,23 @@ html, body{
         height: 290px;
 
     }
+    .blog-home .main-section .contact-section .contact-sec-grid{
+          grid-template-columns: 1fr;
+          height: fit-content;
+          height: -moz-fit-content;
+    }
+    .blog-home .main-section .contact-section .contact-sec-grid .contact-details .details-wrapper{
+        height: fit-content;
+        height: -moz-fit-content;
+        width: 80%;
+    }
 }
 @media screen and (max-width: 560px){
     .blog-home .main-section .about-section .about-sec-grid .about-text{
         width: 90%;
+    }
+    .blog-home .main-section .contact-section .contact-sec-grid .contact-details .details-wrapper{
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 500px){
@@ -474,5 +640,11 @@ html, body{
         height: 300px;
         margin: 10px auto;
         border: 10px solid rgb(249, 104, 38);
+    }
+    .blog-home .main-section .contact-section .contact-sec-grid .contact-details .details-wrapper{
+        width: 90%;
+    }
+    .blog-home .main-section .contact-section .contact-sec-grid .contact-form form{
+        width: 100%;
     }
 }
